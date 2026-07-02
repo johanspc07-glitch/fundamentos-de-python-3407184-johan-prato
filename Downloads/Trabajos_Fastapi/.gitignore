@@ -1,5 +1,8 @@
-venv\
+#no se debe incluir los entornos virtuales
+venv/
 
-__pycache__\
+#pycache
+**/__pycache__/
+base_datos.db
 
-*.png
+bd_clientes.sqlite3
