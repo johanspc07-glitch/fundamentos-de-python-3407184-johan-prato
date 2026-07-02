@@ -1,7 +1,7 @@
 from fastapi import FastAPI
-from app.enrutadores import clientes
-from app.enrutadores import facturas
-from app.enrutadores import transacciones
+from app.enrutador import clientes
+from app.enrutador import facturas
+from app.enrutador import transacciones
 from app.conexion_bd import crear_tablas
 
 app = FastAPI(lifespan=crear_tablas)

@@ -1,6 +1,5 @@
 from fastapi import APIRouter, HTTPException, status
 from sqlmodel import select
-
 from app.conexion_bd import Sesion_dependencia
 from app.modelos.facturas import Factura
 from app.modelos.transacciones import (
@@ -37,7 +36,7 @@ async def obtener_transaccion(id_transaccion: int, sesion: Sesion_dependencia):
 
 
 #endpoint para crear una transaccion
-@rutas_transacciones.post("/transacciones", response_model=TransaccionLeer)
+@rutas_transacciones.post("/transacciones", response_model=TransaccionLeer, status_code=status.HTTP_201_CREATED)
 async def crear_transaccion(
     factura_id: int,
     datos_transaccion: TransaccionCrear,

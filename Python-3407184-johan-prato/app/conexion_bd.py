@@ -2,7 +2,7 @@ from fastapi import FastAPI, Depends
 from typing import Annotated
 from sqlmodel import Session , SQLModel, create_engine
 
-nombre_bd = "bd_clientes.sqlite3"
+nombre_bd = "db_clientes.sqlite3"
 url_bd = f"sqlite:///{nombre_bd}"
 
 #motor de db
