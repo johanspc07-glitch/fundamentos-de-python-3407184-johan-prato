@@ -1,9 +1,11 @@
 from fastapi import APIRouter, HTTPException, status
-from app.enrutadores.facturas import lista_facturas
-from modelos.transsacion import Transsacion, TranssacionCrear, TranssacionEditar
+from ..modelos.facturas import Factura
+from ..modelos.transsacion import Transsacion, TranssacionCrear, TranssacionEditar
+from ..listas import lista_transsaciones, lista_facturas
 
 rutas_transsaciones = APIRouter()
-lista_transsaciones: list[Transsacion] = []
+
+#lista_transsaciones: list[Transsacion] = []
 
 
 # transsaciones

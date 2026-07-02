@@ -1,16 +1,12 @@
 from fastapi import FastAPI, HTTPException, status
-from app.modelos.clientes import Cliente, ClienteCrear, ClienteEditar
-from app.modelos.facturas import Factura, FacturaCrear, FacturaEditar
-from app.modelos.transsacion import Transsacion, TranssacionCrear, TranssacionEditar
-from enrutadores import clientes
+from .enrutadores.clientes import rutas_clientes
+from .enrutadores.facturas import rutas_facturas
+from .enrutadores.transsaciones import rutas_transsaciones
 
 app = FastAPI()
 
-lista_clientes: list[Cliente] = []
-lista_facturas: list[Factura] = []
-lista_transsaciones: list[Transsacion] = []
-
-app.include_router(clientes.rutas_clientes, tags=["Clientes"])
-app.include_router(clientes.rutas_facturas, tags=["Facturas"])
+app.include_router(rutas_clientes, tags=["Clientes"])
+app.include_router(rutas_facturas, tags=["Facturas"])
+app.include_router(rutas_transsaciones, tags=["Transacciones"])
 
 
