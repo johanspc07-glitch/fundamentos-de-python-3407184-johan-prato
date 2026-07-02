@@ -69,7 +69,7 @@ git clone <URL_DEL_REPOSITORIO>
 Entrar al proyecto:
 
 ```bash
-cd FASTAPI
+cd Trabajos_Fastapi
 ```
 
 ---
