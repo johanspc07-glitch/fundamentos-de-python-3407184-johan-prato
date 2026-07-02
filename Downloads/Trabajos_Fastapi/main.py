@@ -145,3 +145,6 @@ async def eliminar_transsacion(transsacion_id: int):
             transsacion_eliminada = lista_transsaciones.pop(i)
             return transsacion_eliminada
     raise HTTPException(status_code=status.HTTP_400_BAD_REQUEST, detail=f"Transsacion con id {transsacion_id} no existe")
+
+
+    
