@@ -1,4 +1,5 @@
 from pydantic import BaseModel
+from clientes import Cliente
 
 class FacturaBase(BaseModel):
     vr_total: float
@@ -6,6 +7,9 @@ class FacturaBase(BaseModel):
     cliente: Cliente
 
 class FacturaCrear(FacturaBase):
+    pass
+
+class FacturaEditar(FacturaBase):
     pass
 
 class Factura(FacturaBase):
